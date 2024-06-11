@@ -46,8 +46,9 @@ NOT TESTED (Yet!)
 * iServices (iCloud, iMessage etc...)
 
 SOME CAUTIONS:
-This Toughbook is...well...tough. I could not for the life of me get OpenCore to work, nor even the latest versions of Clover. What i had to do was use a Unibeast installer for Mojave which has Clover 5102 on it, that is the only version i could get to work without stalling or reboot looping.
+* This Toughbook is...well...tough. I could not for the life of me get OpenCore to work, nor even the latest versions of Clover. What i had to do was use a Unibeast installer for Mojave which has Clover 5102 on it, that is the only version i could get to work without stalling or reboot looping.
 
 Why? I THINK this is because this toughbook has no ability for one to disable the dreaded CFGLOCK , running the ControlMsrE2 EFI utility when i was trying OpenCore indicated that the firmware has CFGLOCK enabled on all CPU cores and i cant find a modded bios, nor am i comfortable trying to mod the bios to unlock it. I cant explain why Clover 5102 included on the Mojave Unibeast installer works but it just does so i'll take it. This also means anything newer than Mojave just doesnt seem to want to work, whether on Clover 5102 or newer or OpenCore. If anyone wants to chime in then please feel free! And yes i had cfglock quirks applied when i tried opencore but they didnt work and the system would simply freeze as it tried to start the installer, whether the installer was Mojave or newer (tried all the way up to Ventura)
 
-SMBios used is for a MacBookPro 13,1 (Tried 13,3 and 14,1 when i was trying OpenCore and newer MacOS versions (same with Clover) ) 
+* SMBios used is for a MacBookPro 13,1 (Tried 13,3 and 14,1 when i was trying OpenCore and newer MacOS versions (same with Clover) ) 
+* This system also has a WLAN card whitelist. So stick with the Intel card thats in there and use Airportitlwm. If you try and install any other card it will not be recognised and when you reboot the system the Wifi light on the front will stop coming on. This would require BIOS modding which as i've said i am not comfortable with. But if you want to give it a shot? By all means! (I would ask that you let me know if you do this, helps everyone then :) )
